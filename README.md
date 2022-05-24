@@ -32,7 +32,7 @@ Now you may **run** server using Web Server Uvicorn: `uvicorn main:app`
 
 ### 5. 
 
-You can see user accaunts in database for registration:
+You can see user accounts in database for registration:
 
 User with full access
 *username: mars*
