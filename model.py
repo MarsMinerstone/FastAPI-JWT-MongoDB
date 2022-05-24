@@ -4,6 +4,7 @@ from pydantic import BaseModel, Field, EmailStr
 
 T = TypeVar('T')
 
+# Model for User
 class User(BaseModel):
 	username : str = Field(default=None)
 	fullname : str = Field(default=None)
@@ -11,7 +12,7 @@ class User(BaseModel):
 	hashed_password : str = Field(default=None)
 	root : bool = Field(default=False)
 
-
+# Model for Updating User
 class UpdateUser(BaseModel):
 	username : Optional[str]
 	fullname : Optional[str]
