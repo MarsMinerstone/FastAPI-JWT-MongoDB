@@ -141,6 +141,8 @@ async def login_for_access_token(form_data: OAuth2PasswordRequestForm = Depends(
 async def create_user(user: User = Body(...), current_user: User = Depends(get_current_root_user)):
     info = await get_user(user.username)
     if info is None:
+        if len(user.hashed_password) < 8:
+            raise HTTPException(status_code=400, detail="Passwor must be more than 8 charachters")
         user.hashed_password = get_password_hash(user.hashed_password)
         user = jsonable_encoder(user)
         new_user = await database["user"].insert_one(user)
