@@ -34,10 +34,10 @@ Now you may **run** server using Web Server Uvicorn: `uvicorn main:app`
 
 You can see user accounts in database for registration:
 
-User with full access
-*username: mars*
-*password: secret*
-
-User with only read access:
-*username: Mark*
-*password: string*
+User with full access 
+*username: mars* 
+*password: secret* 
+ 
+User with only read access: 
+*username: Mark* 
+*password: string* 
